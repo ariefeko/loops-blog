@@ -12,20 +12,9 @@ class CommentController extends Controller
     public function index()
     {
         $users = User::pluck('email')->toArray();
-        // dd($users);
         $comments = Comment::whereNotIn('email', $users)->get();
-        //         
-        //         
-        //         
-        // $comments = DB::table('comments')
-        //     ->distinct()    
-        //     ->select(['users.*', 'comments.id', 'comments.name', 'comments.email', 'website', 'comment'])
-        //     ->leftJoin('users', 'comments.email', '<>', 'users.email')
-        //     // ->join('posts', 'posts.id', '=', 'comments.post_id')
-        //     // ->where('comments.email', '!=', 'users.email')
-        //     ->get();
-// dd($comments);  
-            return view('comments.comment', [
+
+        return view('comments.comment', [
             'comments' => $comments
         ]);
     }
