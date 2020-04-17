@@ -8,7 +8,9 @@
 
 ## Penjelasan
 Sistem ini menerapkan konsep blog yang secara keseluruhan terbagi menjadi 2 halaman utama (guest dan registered page), dalam registered page terdapat CRUD untuk Post dan Comment. Pada setiap table list sudah mendukung datatable untuk kecepatan dan interaktifitas list, serta dalam setiap query sudah diterapkan eager loading untuk meningkatkan kecepatan load data di frontend/views.
+
 Sedangkan di untuk User untuk list saja, registered page sudah di relasikan satu sama lain sehingga user dapat dengan mudah mendapatkan informasi di setiap data. Penerapan Eloquent query, observer sebagian berada di halaman ini, untuk generating slug sudah disediakan 2 alternatif yang pertama menggunakan observer pada saat creating dan updating post, dan yang kedua menggunakan jquery script pada saat user mengetik title di form create/edit post.
+
 Pada guest page, terdapat halaman home yang berisi list semua artikel atau post, di setiap artikel detail user / guest dapat memberi komentar pada post tersebut, registered user dan guest user dapat memberikan komentar pada setiap post.
 
 ## Kekurangan
